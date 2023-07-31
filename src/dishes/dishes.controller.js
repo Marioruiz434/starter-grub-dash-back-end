@@ -80,13 +80,6 @@ function update(req, res) {
 
 }
 
-function destroy(req, res) {
-  const { dishId } = req.params;
-  const index = dishes.findIndex((dish) => dish.id === dishId);
-  dishes.splice(index, 1);
-  res.sendStatus(204);
-}
-
 module.exports = {
   create: [
     bodyDataHas("name"),
